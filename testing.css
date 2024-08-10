@@ -1,0 +1,106 @@
+body {
+	margin: 0;
+	font-family: Poppins;
+	background: #212121;
+}
+.logopfp{
+	margin-left:20px ;
+	font-size:;
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+.logoimg{
+		width: 40px;  /* Atur lebar sesuai kebutuhan */
+		height: auto;  /* Menjaga rasio aspek */
+		display: flex; /* Pastikan gambar ditampilkan sebagai blok */
+		margin-right: 10px; /* Center gambar jika diperlukan */	
+		margin-bottom: 6px;
+}
+.navbar{
+	background: transparent;
+	margin: 0;
+	position: fixed;
+	width: 100%;
+}
+ 
+.logo{
+	font-size: 25px;
+	font-weight: 600;
+	text-decoration: none;
+	color: white;
+}
+ 
+.container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 5%;
+}
+ 
+.tombol{
+	display: none;
+	color: white;
+	font-size: 14pt;			
+}
+ 
+.tombol:hover{
+	cursor: pointer;
+}
+ 
+.menu{
+	margin: 0;
+	display: flex;
+	list-style: none;
+	padding: 0;	
+	font-size: 18px;	
+	font-weight: 500;	
+}
+ 
+.menu li{
+	padding-left: 0;
+	margin-right: 35px;
+}
+ 
+.menu li a{
+	padding:10px;
+	color: white;
+	text-decoration: none;
+	display: inline-block;
+	transition: 1s;
+}
+.menu li a:hover{
+	color: #4a4a4a;
+}
+.beranda{
+	display: flex;
+	align-items: center;
+	height: 800px;
+	padding: 0 10%;	
+	background: url(Logo/Desain\ tanpa\ judul.png) no-repeat;
+}
+.beranda-konten{
+	color: white;
+	max-width:700px;
+}
+.beranda-konten h1{
+	font-size: 56px;
+	padding-bottom: 0;
+	margin: 0;
+	padding:0;
+	
+}
+
+.beranda-konten h3{
+	font-size: 30px;
+	color: rgb(238, 213, 19);
+	font-weight: 550;
+	margin: 0;
+	padding:0;
+	
+
+}
+
+.beranda-konten p{
+    padding-bottom: 0;
+}
