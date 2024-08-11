@@ -104,3 +104,48 @@ body {
 .beranda-konten p{
     padding-bottom: 0;
 }
+
+.sosmed{
+	position: absolute;
+	bottom: 250px;
+	width: 170px;
+	margin-left: 185px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.sosmed a{
+	position:relative ;
+	display: inline-flex;
+	width: 40px;
+	height: 40px;
+	justify-content: center;
+    align-items: center;
+	background-color: transparent;
+	border: 2px solid rgb(238, 213, 19) ;
+	border-radius: 50%;
+	font-size: 23px;
+	color: rgb(238, 213, 19);
+	text-decoration: none;
+	z-index: 1;
+	overflow: hidden;
+	transition: .5s;
+}
+.sosmed a:hover{
+	color: #212121;
+}
+.sosmed a::before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	background: rgb(238, 213, 19);
+	z-index: -1;
+	transition:  .5s;
+}
+.sosmed a:hover::before{
+	width: 100%;
+
+}
