@@ -12,7 +12,7 @@ span {
 
 /* Navbar Styles */
 .navbar {
-    background: transparent;
+    background: transparent ;
     position: fixed;
     width: 100%;
     margin: 0;
@@ -58,7 +58,7 @@ span {
     color: white;
     text-decoration: none;
     display: inline-block;
-    transition: color 0.75s ease;
+    transition: color 0.4s ease;
 }
 
 .menu li a:hover {
@@ -69,9 +69,13 @@ span {
 .beranda {
     display: flex;
     align-items: center;
-    height: 850px;
+    margin-left: 50px;
+    height: 940px;
     padding: 0 10%;
-    background: url('Logo/Desain tanpa judul.png') no-repeat;
+    background: url('Logo/Hexagonal.png') no-repeat;
+    background-size: 715px;
+    background-position: 920px 120px;
+    
 }
 
 .beranda-konten {
@@ -120,10 +124,10 @@ span {
 /* Social Media Icons Styles */
 .sosmed {
     position: absolute;
-    bottom: 250px;
+    bottom: 220px;
     width: 215px;
-    margin-left: 184px;
-    margin-bottom: 18px;
+    margin-left: 232px;
+    margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
 }
@@ -139,7 +143,7 @@ span {
 	border: 2px solid rgb(238, 213, 19) ;
 	border-radius: 50%;
 	font-size: 23px;
-	color: rgb(238, 213, 19);
+	color: #eed513;
 	text-decoration: none;
 	z-index: 1;
 	overflow: hidden;
@@ -161,4 +165,41 @@ span {
 }
 .sosmed a:hover::before{
 	width: 100%;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    margin:0;
+    height: 940px;
+    padding: 0 5%;
+    background-color: #313131;
+    background: url(Logo/Desain\ tanpa\ judul\ \(1\).png)no-repeat;
+    background-position: -636px;
+}
+.about-img img {
+    width: 650px;
+    height: 650px;
+    margin-left: 80px;
+    padding: 0;
+}
+.about-contain {
+    color: white; 
+    max-width: 700px;
+    margin-left: 40px;
+   
+}
+.about-contain h1 {
+    font-size: 60px;
+    margin: 0;
+}
+.about-contain h3 {
+    font-size: 30px;
+    color: rgb(238, 213, 19);
+    margin-top: 0;
+    font-weight: 550;
+    margin: 0;
+}
+.about-contain p {
+    font-size: 17px;
 }
