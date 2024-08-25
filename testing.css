@@ -1,4 +1,7 @@
 /* General Styles */
+html {
+    scroll-behavior: smooth;
+}
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -12,10 +15,11 @@ span {
 
 /* Navbar Styles */
 .navbar {
-    background: transparent ;
+    background: transparent;
     position: fixed;
     width: 100%;
     margin: 0;
+    z-index: 1000;
 }
 
 .container {
@@ -26,7 +30,7 @@ span {
 }
 
 .logopfp {
-    margin-left: 20px;
+    margin-left: 25px;
     display: flex;
     align-items: center;
     width: 100%;
@@ -54,15 +58,18 @@ span {
 
 .menu li a {
     position: relative;
-    padding: 10px 10px 3px; /* Adjusted for better readability */
+    padding: 10px 10px 3px;
     color: white;
     text-decoration: none;
     display: inline-block;
-    transition: color 0.4s ease;
+    transition: color 0.3s ease;
+    border-bottom: 3px solid transparent;
 }
 
-.menu li a:hover {
-    color: rgb(238, 213, 19);
+/* Active state for menu items */
+.menu li a.active, .menu li a:hover {
+    color: #eed513;
+    border-bottom: 3px solid #eed513;
 }
 
 /* Hero Section Styles */
@@ -72,10 +79,6 @@ span {
     margin-left: 50px;
     height: 940px;
     padding: 0 10%;
-    background: url('Logo/Hexagonal.png') no-repeat;
-    background-size: 715px;
-    background-position: 920px 120px;
-    
 }
 
 .beranda-konten {
@@ -96,7 +99,7 @@ span {
 }
 
 .beranda-konten p {
-    margin-bottom: 20px; /* Added spacing for consistency */
+    margin-bottom: 20px;
 }
 
 .beranda-konten a {
@@ -121,6 +124,12 @@ span {
     box-shadow: 0px 0px 10px 5px rgb(238, 213, 19);
 }
 
+.beranda-img img{
+    width: 715px;
+    height: 715px;
+    margin-left: 50px;
+    margin-top: 10px;
+}
 /* Social Media Icons Styles */
 .sosmed {
     position: absolute;
@@ -132,67 +141,78 @@ span {
     justify-content: space-between;
 }
 
-.sosmed a{
-	position:relative ;
-	display: inline-flex;
-	width: 40px;
-	height: 40px;
-	justify-content: center;
+.sosmed a {
+    position: relative;
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
     align-items: center;
-	background-color: transparent;
-	border: 2px solid rgb(238, 213, 19) ;
-	border-radius: 50%;
-	font-size: 23px;
-	color: #eed513;
-	text-decoration: none;
-	z-index: 1;
-	overflow: hidden;
-	transition: .5s;
-}
-.sosmed a:hover{
-	color: #212121;
-}
-.sosmed a::before{
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 0;
-	height: 100%;
-	background: rgb(238, 213, 19);
-	z-index: -1;
-	transition:  .5s;
-}
-.sosmed a:hover::before{
-	width: 100%;
+    background-color: transparent;
+    border: 2px solid rgb(238, 213, 19);
+    border-radius: 50%;
+    font-size: 23px;
+    color: #eed513;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
 }
 
+.sosmed a:hover {
+    color: #212121;
+}
+
+.sosmed a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgb(238, 213, 19);
+    z-index: -1;
+    transition: .5s;
+}
+
+.sosmed a:hover::before {
+    width: 100%;
+}
+
+/* About Section */
 .about {
     display: flex;
     align-items: center;
-    margin:0;
+    margin: 0;
     height: 940px;
     padding: 0 5%;
     background-color: #313131;
-    background: url(Logo/Desain\ tanpa\ judul\ \(1\).png)no-repeat;
+    background: url(Logo/Desain\ tanpa\ judul\ \(1\).png) no-repeat;
     background-position: -636px;
 }
+
 .about-img img {
-    width: 650px;
-    height: 650px;
+    width: 630px;
+    height: 630px;
     margin-left: 80px;
     padding: 0;
 }
+
+.about-img img:hover {
+    box-shadow: 2px solid #eed513;
+}
+
 .about-contain {
     color: white; 
     max-width: 700px;
     margin-left: 40px;
-   
 }
+
 .about-contain h1 {
     font-size: 60px;
     margin: 0;
 }
+
 .about-contain h3 {
     font-size: 30px;
     color: rgb(238, 213, 19);
@@ -200,6 +220,121 @@ span {
     font-weight: 550;
     margin: 0;
 }
+
 .about-contain p {
     font-size: 17px;
+}
+
+/* Education Section */
+.heading-pendidikan {
+    font-size: 5rem;
+    text-align: center;
+    margin: 5rem 0;
+}
+
+.pendidikan {
+    padding: 100px 15px;
+    background: #212121;
+}
+
+.pendidikan h2 {
+    margin-bottom: 5rem;
+    color: white;
+}
+
+.timeline-pendidikan {
+    max-width: 1250px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.timeline-pendidikan::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background-color: #eed513;
+    left: calc(50% - 1px);
+}
+
+.timeline-isi {
+    margin-bottom: 40px;
+    width: 100%;
+    position: relative;
+}
+
+.timeline-isi:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-isi:nth-child(odd) {
+    padding-right: calc(50% + 30px);
+    text-align: right;
+}
+
+.timeline-isi:nth-child(even) {
+    padding-left: calc(50% + 30px);
+    text-align: left;
+}
+
+.timeline-dot {
+    height: 21px;
+    width: 21px;
+    background-color: #eed513;
+    box-shadow: 0 0 25px #eed513, 0 0 50px #eed513;
+    position: absolute;
+    left: calc(50% - 8px);
+    border-radius: 50%;
+    top: 10px;
+}
+
+.timeline-date {
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+    margin: 6px 0 15px;
+}
+
+.timeline-content {
+    background-color: rgb(15, 15, 15);
+    border: 3px solid #eed513;
+    padding: 30px 50px;
+    border-radius: 4rem;
+    box-shadow: 0 0 10px #eed513;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.timeline-content:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 25 #eed513;
+}
+
+.timeline-content h3 {
+    font-size: 25px;
+    color: white;
+    margin: 0 0 10px;
+    font-weight: 600;
+}
+
+.timeline-content p {
+    color: white;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #eed513;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #212121;
 }
