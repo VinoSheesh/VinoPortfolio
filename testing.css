@@ -20,6 +20,7 @@ span {
     width: 100%;
     margin: 0;
     z-index: 1000;
+    backdrop-filter: blur(3px);
 }
 
 .container {
@@ -30,7 +31,7 @@ span {
 }
 
 .logopfp {
-    margin-left: 25px;
+    margin-left: 30px;
     display: flex;
     align-items: center;
     width: 100%;
@@ -135,7 +136,7 @@ span {
     position: absolute;
     bottom: 220px;
     width: 215px;
-    margin-left: 232px;
+    margin-left: 236px;
     margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
